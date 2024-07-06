@@ -221,3 +221,94 @@ class MyUserDrawer extends StatelessWidget {
     );
   }
 }
+
+class MyCSDrawer extends StatelessWidget {
+  const MyCSDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 40),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Aplikasi Pendataan Alat Tulis Kantor",
+                style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+              const SizedBox(height: 70),
+              GestureDetector(
+                onTap: () => context.pushNamed(RouterName.dashboardCSPage),
+                child: Text(
+                  "Main Page",
+                  style: GoogleFonts.poppins(
+                    fontSize: 17,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 35),
+              GestureDetector(
+                onTap: () => context.pushNamed(RouterName.profilePage),
+                child: Text(
+                  "Profile",
+                  style: GoogleFonts.poppins(
+                    fontSize: 17,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 35),
+              GestureDetector(
+                onTap: () => context.pushNamed(RouterName.maintenanceService),
+                child: Text(
+                  "Maintenance Service",
+                  style: GoogleFonts.poppins(
+                    fontSize: 17,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 35),
+              GestureDetector(
+                onTap: () => context.pushNamed(RouterName.maintenanceHistory),
+                child: Text(
+                  "Maintenance History",
+                  style: GoogleFonts.poppins(
+                    fontSize: 17,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 35),
+              const Divider(
+                thickness: 2,
+              ),
+              const SizedBox(height: 35),
+              FlutterSwitch(
+                  activeIcon: const Icon(
+                    Icons.dark_mode,
+                    color: Colors.black,
+                  ),
+                  inactiveIcon: const Icon(Icons.light_mode),
+                  value: Provider.of<ThemeProvider>(context).isDarkMode,
+                  onToggle: (value) =>
+                      Provider.of<ThemeProvider>(context, listen: false)
+                          .toggleTheme()),
+              const SizedBox(height: 30),
+              GestureDetector(
+                  onTap: () {
+                    Provider.of<User>(context, listen: false).isLogin = false;
+                    context.goNamed(RouterName.loginPageName);
+                  },
+                  child: Text(
+                    "Log Out",
+                    style: GoogleFonts.poppins(fontSize: 20),
+                  )),
+            ]),
+      ),
+    );
+  }
+}
