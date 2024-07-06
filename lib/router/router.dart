@@ -1,5 +1,6 @@
 import "package:atk_inventoris/admin/additem.dart";
 import "package:atk_inventoris/admin/dashboard.dart";
+import "package:atk_inventoris/admin/itemdetail.dart";
 import "package:atk_inventoris/admin/itemreport.dart";
 import "package:atk_inventoris/admin/itemrequests.dart";
 import "package:atk_inventoris/admin/orderstatus.dart";
@@ -20,6 +21,7 @@ import "package:atk_inventoris/cust_service/maintenance.dart";
 import "package:atk_inventoris/cust_service/maintenance_page.dart";
 import "package:atk_inventoris/router/routernamed.dart";
 import "package:atk_inventoris/user/dashboard.dart";
+import "package:atk_inventoris/user/itemdetail.dart";
 import "package:atk_inventoris/user/itemrequest.dart";
 import "package:atk_inventoris/user/orderstatus.dart";
 import "package:atk_inventoris/user/retrieveitem.dart";
