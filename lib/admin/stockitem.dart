@@ -1,6 +1,6 @@
-import 'package:atk/providers/itemlist.dart';
-import 'package:atk/router/routernamed.dart';
-import 'package:atk/utils/stocktile.dart';
+import 'package:atk_inventoris/provider/itemlist.dart';
+import 'package:atk_inventoris/router/routernamed.dart';
+import 'package:atk_inventoris/utils/stocktile.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
