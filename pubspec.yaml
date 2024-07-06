@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.1.2
   google_fonts: ^6.2.1
   flutter_switch: ^0.3.2
+  flutter_local_notifications: ^17.2.1
 
 dev_dependencies:
   flutter_test:

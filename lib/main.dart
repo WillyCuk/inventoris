@@ -5,6 +5,7 @@
 // import 'package:atk/providers/maintenance.dart';
 // import 'package:atk/providers/monthlyreport.dart';
 // import 'package:atk/providers/theme.dart';
+import 'package:atk_inventoris/notification/notif_service.dart';
 import 'package:atk_inventoris/provider/theme.dart';
 import 'package:atk_inventoris/provider/user.dart';
 // import 'package:atk/providers/userorder.dart';
@@ -15,7 +16,7 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await NotificationService.initialize();
+  await NotificationService.initialize();
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => User()),
