@@ -91,15 +91,15 @@ class ComplaintCard extends StatelessWidget {
                   onPressed: () {
                     _showResolveConfirmationDialog(context, complaint);
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                  ),
                   child: Text(
                     'Resolve',
                     style: GoogleFonts.poppins(
                       fontSize: 16,
                       color: Theme.of(context).colorScheme.primary,
                     ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.inversePrimary,
                   ),
                 ),
               ],
@@ -217,15 +217,15 @@ class ComplaintCard extends StatelessWidget {
                 Provider.of<CustomerComplaint>(context, listen: false).resolveComplaint(complaint);
                 Navigator.of(context).pop();
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+              ),
               child: Text(
                 'Resolve',
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   color: Theme.of(context).colorScheme.primary,
                 ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
           ],

@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                       context.goNamed(RouterName.dashboardUserPage);
                     } else if (userProvider.isLogin &&
                         userProvider.role == "cs") {
-                      // context.goNamed(RouterName.custServiceFrontPage);
+                      context.goNamed(RouterName.custServiceFrontPage);
                     } else {
                       context.goNamed(RouterName.maintenancePage);
                     }
